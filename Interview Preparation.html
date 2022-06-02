@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            // Author: Michael K. Jones
+
+            "use strict";
+
+            //--| Things to know:
+
+            //---------------------------------------------------------//
+            //--| Hoisting
+            //---------------------------------------------------------//
+            // declare a global variable
+            var globalVar = "Look, I'm Global!";
+
+            // call the say hello function
+            sayHello();
+
+            // define the sayHello function
+            function sayHello() {
+                // globalVar is undefined
+                alert(globalVar);
+
+                // override globalVar with a local version
+                var globalVar = "Look, I'm Local globalVar!";
+
+                // show the overridden message
+                alert(globalVar);
+            }
+
+        </script>
+    </body>
+</html>
