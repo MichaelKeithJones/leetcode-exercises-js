@@ -3,9 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <title>Title</title>
+        <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
     </head>
     <body>
-        <script>
+    {{ "Hello, Codeup!" }}
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular-csp.min.css" crossorigin="anonymous"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular-csp.css" crossorigin="anonymous"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js" crossorigin="anonymous"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.js" crossorigin="anonymous"></script>
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js.map" crossorigin="anonymous"></script>-->
+    <script>
             // Author: Michael K. Jones
 
             "use strict";
@@ -15,24 +22,44 @@
             //---------------------------------------------------------//
             //--| Hoisting
             //---------------------------------------------------------//
-            // declare a global variable
-            var globalVar = "Look, I'm Global!";
 
-            // call the say hello function
-            sayHello();
+            //--| Hoisting refers to a variable declaration being shifted to the top of the function body within a given
+            //--| scope.
 
-            // define the sayHello function
-            function sayHello() {
-                // globalVar is undefined
-                alert(globalVar);
 
-                // override globalVar with a local version
-                var globalVar = "Look, I'm Local globalVar!";
+            //---------------------------------------------------------//
+            //--| Array Splicing
+            //---------------------------------------------------------//
 
-                // show the overridden message
-                alert(globalVar);
-            }
+            //--| Adding to front and removing from front of array: unshift(add) and shift(remove)
+            //--| Adding to front and removing from back of array: push(add) and pop(remove)
 
-        </script>
+            //--| arrayName.splice(startIndex, numberOfItemsToRemove)
+            //--| Removes this 'numberOfItemsToRemove' starting from 'startIndex'
+
+            //--| arrayName.splice(startIndex, 0, 'firstItemToAdd', 'anotherItemToAdd');
+            //--| Adds 'firstItemToAdd' and 'anotherItemToAdd' starting from before element at 'startIndex'
+            //--| '0' indicates nothing will be replaced/removed
+            //--| Anything other than '0' indicates a number of elements will be replaced/removed
+
+            //---------------------------------------------------------//
+            //--| The this Keyword
+            //---------------------------------------------------------//
+
+            //--| The this keyword references the object it's in scope with. Exceptions include async calls where this
+            //--| may be reset back to the window. The bind keyword or arrow methods can fix this issue.
+
+            //---------------------------------------------------------//
+            //--| Angular
+            //---------------------------------------------------------//
+
+            (function() {
+                let app = angular.module("moduleName", []);
+            })();
+
+
+
+    </script>
+
     </body>
 </html>
