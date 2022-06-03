@@ -7,6 +7,9 @@
     </head>
     <body>
 
+    <input data-field="score" />
+
+    <!--
     <script>
             // Author: Michael K. Jones
 
@@ -110,6 +113,68 @@
 
 
     </script>
+    -->
+<!--
+    <script>
 
+        //---------------------------------------------------------//
+        //--| https://www.learn-js.org/
+        //---------------------------------------------------------//
+
+        //---------------------------------------------------------//
+        //--| Exercise 1
+        //---------------------------------------------------------//
+
+        console.log('Hello World');
+
+        //---------------------------------------------------------//
+        //--| Exercise 2
+        //---------------------------------------------------------//
+
+        //--| 3 basic types = number, string, and boolean
+        //--| 2 object types = array and object
+        //--| 2 special types = undefined and null
+
+        // let myNumber = 4;
+        let myString = 'Variables are great.';
+        let myBoolean = false;
+
+        //---------------------------------------------------------//
+        //--| Exercise 3
+        //---------------------------------------------------------//
+
+        // let myArray = ['What is the meaning of life?', 42, true];
+
+        //---------------------------------------------------------//
+        //--| Exercise 4
+        //---------------------------------------------------------//
+
+        let myArray = [true, "What is the meaning of life?"];
+        myArray.push(42);
+        myArray.shift();
+
+        //---------------------------------------------------------//
+        //--| Exercise 5
+        //---------------------------------------------------------//
+
+        let firstName = "John";
+        let lastName = "Smith";
+        let myNumber = 21;
+
+        let fullName = firstName + ' ' + lastName;
+        let meaningOfLife = myNumber * 2;
+
+        //---------------------------------------------------------//
+        //--| Exercise 6
+        //---------------------------------------------------------//
+
+    </script>-->
+    <script>
+
+        let element = document.querySelector('[data-field="score"]');
+        element.value = 123;
+        console.log(element.value);
+
+    </script>
     </body>
 </html>
