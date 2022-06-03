@@ -6,12 +6,7 @@
         <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
     </head>
     <body>
-    {{ "Hello, Codeup!" }}
-<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular-csp.min.css" crossorigin="anonymous"></script>-->
-<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular-csp.css" crossorigin="anonymous"></script>-->
-<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js" crossorigin="anonymous"></script>-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.js" crossorigin="anonymous"></script>
-<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js.map" crossorigin="anonymous"></script>-->
+
     <script>
             // Author: Michael K. Jones
 
@@ -53,10 +48,65 @@
             //--| Angular
             //---------------------------------------------------------//
 
-            (function() {
-                let app = angular.module("moduleName", []);
-            })();
+            let a = {}; // create a new object
+            a.b = 'hello';
 
+            console.log(a.b);
+            console.log(a['b']);
+
+            a = []; // create an array
+            a.unshift(3);
+            a.b = 'hello';
+
+            console.log(a);
+
+            a = function() {};
+            a.b = function() {};
+
+            console.log(a);
+
+            let c = [1,2,3,4,5];
+            c.forEach(e => console.log(e));
+
+            let pairs = {'a': 'apple', 'b': 'banana'};
+            for(let key in pairs) {
+                console.log(key);        // 'a', 'b'
+                console.log(pairs[key]); // 'apple', 'banana'
+            }
+
+            let test = {
+                first: 'First',
+                last: 'Last'
+            }
+
+            function Person(first, last)
+            {
+                this.first = first;
+                this.last = last;
+            }
+            let john = new Person("John", "Doe");
+            let mary = new Person("Mary", "Deer");
+            Person.prototype.full = function() {return this.first + " " + this.last;};
+            console.log(john.full());
+            console.log(john);
+            console.log(mary);
+
+            //---------------------------------------------------------//
+            //--| Truthy , Falsy
+            //---------------------------------------------------------//
+
+            //--| Falsy |--//
+            //--------------
+            //--| false
+            //--| 0
+            //--| empty strings ('' or "")
+            //--| null
+            //--| undefined
+            //--| NaN
+
+            //--| Truthy |--//
+            //--------------
+            //--| Everything else including empty '[]'
 
 
     </script>
